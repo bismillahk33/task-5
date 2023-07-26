@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+      body {
+        background-color: #1D1AC2;
+      }
+      .container {
+        height: 650px;
+        width: 370px;
+        margin: 0 auto;
+        background-color: #D55D18;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 10px 10px 10px 10px #076441;
+      }
+    </style>
+
+    <script>
+      function valid() {
+        var name = document.form1.name.value ;
+        var regNo = document.form1.reg.value ;
+        var email = document.form1.email.value ;
+        var cnic = document.form1.cnic.value ;
+        var phone = document.form1.phone.value ;
+        var website = document.form1.website.value ;
+        var password = document.form1.password.value ;
+
+        const namePatt = /[A-Za-z]+/ ;
+        const regPatt = /SU-[0-9]+-[0-9]+-[0-9]+-[0-9]+/ ;
+        const emailPatt = /[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]+/ ;
+        const cnicPatt = /\d\d\d\d\d-\d\d\d\d\d\d\d-\d/ ;
+        const phonePatt = /03\d\d-\d\d\d\d\d\d\d/ ;
+        const websitePatt = /www\.[A-Za-z]+\.[A-Za-z]+/ ;
+        const passwordPatt = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{7,}$/ ;
+
+        if (namePatt.test(name)) {}
+        else{alert("Name is mandatory !  and will only contain Letter")}
+
+        if (regPatt.test(regNo)) {}
+        else{alert("Reg No is mandatory!  Reg No will be like SU-19-01-002-011")}
+        
+        if (emailPatt.test(email)) {}
+        else{alert("Email is mandatory!  Email will be like xyz@gmail.com")}
+
+        if (cnicPatt.test(cnic)) {}
+        else{alert("CNIC is mandatory!  CNIC will be like 17201-6789123-6")}
+
+        if (phonePatt.test(phone)) {}
+        else{alert("Phone No is mandatory!  Phone No will be like 0300-4567967")}
+
+        if (websitePatt.test(website)) {}
+        else{alert("Website is mandatory!  Website will be like www.google.com")}
+
+        if (passwordPatt.test(password)) {}
+        else{alert("Password is mandatory!  Password must br Minimum eight characters, at least one uppercase letter, one lowercase letter and one number:")}
+      
+
+        if( (namePatt.test(name)) && (regPatt.test(regNo)) && (emailPatt.test(email)) && (cnicPatt.test(cnic)) && (phonePatt.test(phone)) && (websitePatt.test(website)) && (passwordPatt.test(password)) )
+        {
+            alert(" Congratulation !!!!!  You have Enter all the Data Correctly .")
+        }
+
+       
+      }
+    </script>
+  <style>.osSwitch{position:relative;display:inline-block;width:34px;height:15.3px}.osSwitch input{opacity:0;width:0;height:0}.osSlider{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:34px;background-color:#93a0b5;transition:0.4s}.osSlider:before{position:absolute;content:'';height:13px;width:13px;left:2px;bottom:1px;border-radius:50%;background-color:white;transition:0.4s}input:checked+.sliderGreen{background-color:#04d289}input:checked+.sliderRed{background-color:#ff3b30}input:not(:checked)+.defaultGreen{background-color:#04d289}input:checked+.osSlider:before{transform:translateX(17px)}
+</style><style>
+    @font-face {
+      font-family: 'SegoeUI_online_security'; 
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
+    }
+
+    @font-face {
+      font-family: 'SegoeUI_bold_online_security'; 
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
+    }
+</style></head>
+  <body monica-version="2.1.0" monica-id="ofpnmcalabcbjgholdjcjblkibolbppb">
+    <form name="form1" class="container">
+      <h1> Pattren Validation </h1>
+
+        Name : <input type="text" name="name" fdprocessedid="jtlya"> 
+        <br><br>
+
+        Reg # : <input type="text" name="reg" fdprocessedid="ll5shp"> 
+        <br><br>
+
+        Email : <input type="email" name="email" fdprocessedid="q5bhore">
+        <br><br>
+      
+        CNIC # : <input type="text" name="cnic" fdprocessedid="o10lz">
+        <br><br>
+
+        Phone # : <input type="text" name="phone" fdprocessedid="an884">
+        <br><br>
+
+        Website : <input type="text" name="website" fdprocessedid="4covy">
+        <br><br>
+
+        Password : <input type="password" name="password" fdprocessedid="ycxfi">
+        <br><br>
+
+        <input type="button" value="Validate" onclick="valid()" fdprocessedid="ec6g5k" data-listener-added_26a4819e="true">
+
+
+        
+
+
+    </form>
+  
+
+<div id="monica-content-root" class="monica-widget"></div></body></html>
